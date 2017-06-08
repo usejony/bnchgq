@@ -30,7 +30,6 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "ladash": "^1.2.0",
     "prop-types": "^15.5.10",
     "query-string": "^4.3.4",
     "react-redux": "^5.0.5",

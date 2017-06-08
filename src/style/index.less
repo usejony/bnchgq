@@ -4,7 +4,7 @@
 #header-box {
   height: @headerHeight;
   background: @themeColor;
-}
+
 
 .header-left {
   height: @headerHeight;
@@ -36,14 +36,14 @@
       background: #fff;
       position: absolute;
       right: -5px;
-      top: 5px;
+      top: 3px;
     }
     &:last-child:after {
       background: none
     }
   };
 }
-
+}
 
 //footer
 #footer {
@@ -136,7 +136,7 @@
       }
     };
     & div span+input {
-    width: 150px;
+    width: 180px;
   }
   };
   td,th {
@@ -176,7 +176,7 @@
 
 //询盘记录
 #records {
-  &th {
+  & th {
     background: @thBg
   }
   & th,& td {
@@ -192,5 +192,8 @@
 #orders {
   & th {
     background: @thBg
+  }
+  & th, & td {
+    text-align: center
   }
 }
