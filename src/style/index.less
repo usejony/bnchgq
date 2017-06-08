@@ -1,0 +1,196 @@
+@import './variable';
+
+//header
+#header-box {
+  height: @headerHeight;
+  background: @themeColor;
+}
+
+.header-left {
+  height: @headerHeight;
+  .flex;
+  align-items: center;
+}
+
+.header-right {
+  .flex;
+  flex: 1;
+  align-items: center;
+  height: @headerHeight;
+  justify-content: flex-end;
+  color: #fff;
+  font-size: @fontSize;
+}
+
+.header-tab {
+  margin-left: 10px;
+  li {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      height: 12px;
+      width: 1px;
+      background: #fff;
+      position: absolute;
+      right: -5px;
+      top: 5px;
+    }
+    &:last-child:after {
+      background: none
+    }
+  };
+}
+
+
+//footer
+#footer {
+  height: @footerHeight;
+  background: @themeColor;
+  font-size: @fontSize;
+  color: #fff;
+  .flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & p {
+    line-height: 30px
+  };
+  & img {
+    margin-top: 10px;
+  }
+}
+
+//body
+#body {
+  background: #f5f5f5;
+  .flex;
+  flex: 1;
+}
+
+.left {
+  width: 20%;
+  min-width: 250px;
+  border-right: 1px solid #eee;
+  margin-top: 10px;
+  background: #fff
+}
+.right {
+  flex: 1;
+  margin: @bodyMargin
+}
+
+
+
+//sider
+.menu {
+  width: 250px;
+}
+
+
+
+
+//online
+.process {
+  .flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  margin-top: @pathBottom;
+  height: 100px;
+  .border;
+  h3 {
+    align-self: flex-start;
+  }
+}
+.process-title {
+  font-size: 16px;
+  color: @themeColor;
+  padding-left: 80px;
+}
+
+
+//table
+.table {
+  width: 100%;
+  background: #fff;
+  margin-top: 8px;
+  border-collapse: collapse;
+  font-size: @fontSize;
+  th {
+    width: 105px;
+    text-align: right;
+    padding-right: 15px;
+    background: @thBg;
+  };
+  td {
+    padding-left: 25px;
+    padding-right: 25px;
+    input{
+      width: 200px;
+      &+span {
+        margin-left: 8px;
+      }
+    };
+    & div span+input {
+    width: 150px;
+  }
+  };
+  td,th {
+    .border;
+    height: 44px;
+  };
+  .letter-select {
+    width: 50px;
+    margin-left: 8px;
+  };
+  .brand {
+    margin-left: 50px;
+  };
+  .brand-select {
+    width: 150px;
+    margin-left: 8px;
+  };
+  .extra {
+    margin-left: 50px;
+  };
+  .category-select {
+    width: 125px;
+  };
+  .addressSelect {
+    width: 180px;
+  };
+  .textarea {
+    resize: none;
+    font-size: 13px
+  }
+  .online-submit {
+    font-size: 13px;
+    .btn(5px,50px)
+  }
+}
+
+
+//询盘记录
+#records {
+  &th {
+    background: @thBg
+  }
+  & th,& td {
+    text-align: center
+  }
+  .ant-pagination{
+    margin-right: 20px
+  }
+}
+
+
+//订单管理
+#orders {
+  & th {
+    background: @thBg
+  }
+}
