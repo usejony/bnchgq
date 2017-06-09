@@ -1,0 +1,18 @@
+@import './variable';
+//footer
+#footer {
+  height: @footerHeight;
+  background: @themeColor;
+  font-size: @fontSize;
+  color: #fff;
+  .flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & p {
+    line-height: 30px
+  };
+  & img {
+    margin-top: 10px;
+  }
+}

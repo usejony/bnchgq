@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Select, Checkbox, Radio, Input, Cascader, Button } from 'antd';
 
-import { addressData } from '../../utils/addressData';
+import '../../style/onlineTab.less';
+import addressData from '../../utils/addressData';
 //antd扩展；
 const Option = Select.Option;
 const RadioGroup = Radio.Group;

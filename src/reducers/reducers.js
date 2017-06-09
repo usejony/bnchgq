@@ -3,7 +3,8 @@ import { combineReducers } from 'redux';
 const loginInfo = {
   logined: false,
   data: {
-    tel: 15971057587
+    tel: 15971057587,
+    email: 'usejony@163.com'
   },
 }
 const logined = (state = loginInfo,action) => {

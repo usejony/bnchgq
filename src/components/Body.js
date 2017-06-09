@@ -3,6 +3,7 @@ import { Menu, Icon, Row, Col } from 'antd';
 import { Sider, siderAry } from './Sider';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+import '../style/body.less';
 const Body = () => {
   return (
     <Router>

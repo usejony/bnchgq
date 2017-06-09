@@ -24,10 +24,13 @@ export default class OrderManage extends Component {
     GET(url)
       .then(data => {
         if (data && data.success) {
+          let ary = data.data;
+          for(let i = 0; i < ary.length; i ++) {
+            ary[i].key = i;
+          }
           this.setState({
-            data: data.data
+            data: ary
           });
-          console.log(data.data);
         }
       })
       .catch(e => {
@@ -37,11 +40,11 @@ export default class OrderManage extends Component {
 
   render() {
     return (
-      <div id="orders">
+      <div className="body">
         <HeadPath title="询盘记录" />
-        <div className="content">
+        <div className="content border">
           <Search />
-          <div>
+          <div className="form">
             <Table dataSource={this.state.data} />
           </div>
         </div>

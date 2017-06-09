@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../style/footer.less';
 const Footer = () => (
   <div id="footer">
     <p>深圳市百能信息技术有限公司版权所有 | 粤CP备11006890号-2</p>

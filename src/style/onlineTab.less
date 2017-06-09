@@ -1,0 +1,61 @@
+@import './variable';
+
+//table
+.table {
+  width: 100%;
+  background: #fff;
+  margin-top: 8px;
+  border-collapse: collapse;
+  font-size: @fontSize;
+  th {
+    width: 105px;
+    text-align: right;
+    padding-right: 15px;
+    background: @thBg;
+  };
+  td {
+    padding-left: 25px;
+    padding-right: 25px;
+    input{
+      width: 200px;
+      &+span {
+        margin-left: 8px;
+      }
+    };
+    & div span+input {
+    width: 180px;
+  }
+  };
+  td,th {
+    .border;
+    height: 44px;
+  };
+  .letter-select {
+    width: 50px;
+    margin-left: 8px;
+  };
+  .brand {
+    margin-left: 50px;
+  };
+  .brand-select {
+    width: 150px;
+    margin-left: 8px;
+  };
+  .extra {
+    margin-left: 50px;
+  };
+  .category-select {
+    width: 125px;
+  };
+  .addressSelect {
+    width: 180px;
+  };
+  .textarea {
+    resize: none;
+    font-size: 13px
+  }
+  .online-submit {
+    font-size: 13px;
+    .btn(5px,50px)
+  }
+}

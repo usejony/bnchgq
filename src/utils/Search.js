@@ -50,11 +50,7 @@ export default class Search extends Component {
 const styles = {
   search: {
     marginTop: 5,
-    paddingTop: 30,
     paddingBottom: 30,
-    borderWidth: 1,
-    borderColor: '#ededed',
-    borderStyle: 'solid'
   },
   box: {
     display: 'flex',

@@ -6,7 +6,6 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers/reducers';
 import { Provider } from 'react-redux';
 import './style/common.less';
-import './style/index.less';
 
 
 import Header from './containers/Header';

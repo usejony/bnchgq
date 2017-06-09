@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { Row, Col } from 'antd';
+
+import '../style/header.less';
 
 const ComHeader = ({loginInfo}) => (
   <div id="header-box">

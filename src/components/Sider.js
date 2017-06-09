@@ -32,14 +32,14 @@ export const siderAry = [
   {
     title: '我的资料',
     icon: 'idcard',
-    exact: true,
-    to: '/',
+    to: '/info',
     component: PersonInfo
   },
   {
     title: '账户管理',
     icon: 'setting',
-    to: '/account',
+     exact: true,
+    to: '/',
     component: AccountManege
   }
 ];
@@ -65,7 +65,8 @@ const styles = {
     borderColor: 'red'
   },
   menu: {
-    border: 'none'
+    border: 'none',
+    minWidth: 250
   },
   item: {
     borderBottomWidth: 1,

@@ -1,4 +1,4 @@
-export const addressData = [{
+export default [{
     "code": "110000",
     "label": "北京市",
     "value": "北京市",

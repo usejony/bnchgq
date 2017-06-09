@@ -1,23 +1,48 @@
 @import './variable';
-
 :global(.text) {
-  color: @textColor;
+    color: @textColor;
 }
-:global(.content) {
-  background: #fff
+
+:global(.border) {
+    .border;
 }
-.border {
-  .border;
+
+:global(.form) {
+  & th {
+    background: @thBg
+  }
+  & th,& td {
+    text-align: center!important
+  }
+  .ant-pagination{
+    margin-right: 20px
+  }
 }
-html,body {
-  height: 100%;
+
+html,
+body {
+    height: 100%;
 }
+
 #root {
-  min-height: 100%;
-  .flex;
+    min-height: 100%;
+    .flex;
 }
+
 #main {
-  .flex;
-  flex-direction: column;
-  flex: 1;
+    .flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+:global(.body) {
+    height: 100%;
+    .flex;
+    flex-direction: column;
+    .content {
+        background: #fff;
+        padding-top: 30px;
+        margin-top: 8px;
+        flex: 1
+    }
 }
