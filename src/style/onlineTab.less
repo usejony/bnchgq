@@ -13,28 +13,27 @@
         padding-right: 15px;
         background: @thBg;
     }
-    ;
     td {
         padding-left: 25px;
         padding-right: 25px;
+        span+span {
+            margin-right: 8px
+        }
         input {
             width: 200px;
             &+span {
                 margin-left: 8px;
             }
         }
-        ;
         & div span+input {
             width: 180px;
         }
     }
-    ;
     td,
     th {
         .border;
         height: 44px;
     }
-    ;
 }
 
 .letterSelect {
@@ -42,33 +41,27 @@
     margin-left: 8px;
 }
 
-;
 .brand {
     margin-left: 50px;
 }
 
-;
-.brandSelect {
+.brandSelect{
     width: 150px;
     margin-left: 8px;
 }
 
-;
 .extra {
     margin-left: 50px;
 }
 
-;
-.categorySelect {
+.categorySelect{
     width: 125px;
 }
 
-;
 .addressSelect {
     width: 180px;
 }
 
-;
 .textarea {
     resize: none;
     font-size: 13px

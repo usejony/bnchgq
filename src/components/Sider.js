@@ -6,7 +6,7 @@ import OnlineEnquiry from './enquiry/OnlineEnquiry';
 import EnquiryRecord from './records/EnquiryRecord';
 import OrderManage from './orders/OrderManage';
 import PersonInfo from './info/PersonInfo';
-// import AccountManege from './account/AccountManage';
+import AccountManege from './account/AccountManage';
 
 import styles from '../style/slider.less';
 
@@ -37,13 +37,13 @@ export const siderAry = [
     to: '/info',
     component: PersonInfo
   },
-  // {
-  //   title: '账户管理',
-  //   icon: 'setting',
-  //    exact: true,
-  //   to: '/',
-  //   component: AccountManege
-  // }
+  {
+    title: '账户管理',
+    icon: 'setting',
+     exact: true,
+    to: '/',
+    component: AccountManege
+  }
 ];
 
 

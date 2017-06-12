@@ -57,7 +57,7 @@ const columns = [{
 
 
 const table = ({dataSource}) => (
-  <Table bordered columns={columns} dataSource={dataSource} onChange={onChange} />
+  <Table className="tabPage" bordered columns={columns} dataSource={dataSource} onChange={onChange} />
 );
 
 export default table;

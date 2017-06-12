@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Select, Checkbox, Radio, Input, Cascader, Button } from 'antd';
 
-import styles from  '../../style/onlineTab.less';
+import styles from '../../style/onlineTab.less';
 import addressData from '../../utils/addressData';
 //antd扩展；
 const Option = Select.Option;
@@ -72,10 +72,10 @@ export default class Table extends Component {
           <tbody>
             <tr>
               <th>品牌：</th>
-              <td>
+              <td >
                 <span>
-                  <span>开头字母</span>
-                  <Select defaultValue={this.state.selectValue} className={styles.letterSelect} onChange={this.handle.bind(this)}>
+                  <span>开头字母：</span>
+                  <Select defaultValue={this.state.selectValue} style={{ width: 50 }} onChange={this.handle.bind(this)}>
                     {
                       LETTER.map((item, index) => (
                         <Option key={index} value={item}>{item}</Option>
@@ -84,8 +84,8 @@ export default class Table extends Component {
                   </Select>
                 </span>
                 <span className={styles.brand}>
-                  <span>品牌</span>
-                  <Select defaultValue={'深圳百能'} className={styles.brandSelect} onChange={this.handle.bind(this)}>
+                  <span>品牌：</span>
+                  <Select defaultValue={'深圳百能'} style={{ width: 200 }} onChange={this.handle.bind(this)}>
                     {
                       BRAND.map((item, index) => (
                         <Option key={index} value={item}>{item}</Option>
@@ -101,7 +101,7 @@ export default class Table extends Component {
             <tr>
               <th>类别：</th>
               <td>
-                <Select defaultValue={'IC类'} className={styles.categorySelect} onChange={this.handle.bind(this)} >
+                <Select defaultValue={'IC类'} style={{ width: 60 }} onChange={this.handle.bind(this)} >
                   <Option value="IC类">IC类</Option>
                   <Option value="IQ类">IQ类</Option>
                   <Option value="ID类">ID类</Option>
@@ -112,7 +112,7 @@ export default class Table extends Component {
             <tr>
               <th>应用场景：</th>
               <td>
-                <RadioGroup value={this.state.selectScene} className={styles.sceneCheck} onChange={this.sceneHandle.bind(this)}>
+                <RadioGroup value={this.state.selectScene} onChange={this.sceneHandle.bind(this)}>
                   <Radio value={1}>智能交通</Radio>
                   <Radio value={2}>智能家居</Radio>
                   <Radio value={3}>智能电网</Radio>
@@ -159,7 +159,7 @@ export default class Table extends Component {
                 </RadioGroup>
               </td>
             </tr>
-            <tr style={{ height: 100 }}>
+            <tr style={{height: 120}}>
               <th>送货信息：</th>
               <td>
                 <div>
@@ -172,16 +172,14 @@ export default class Table extends Component {
                     <Input />
                   </span>
                 </div>
-                <div style={{ marginTop: 16 }}>
-                  <span style={{display: 'flex'}}>
-                    <span style={{display: 'flex',alignItems: 'center'}}>
-                      <span>收货地址：</span>
-                      <Cascader options={addressData} onChange={this.addressHandle.bind(this)} className={styles.addressSelect} placeholder="请选择收货地址" />
-                    </span>
-                    <span style={{ marginLeft: 20 }}>
-                      <span>详细地址：</span>
-                      <Input placeholder="请输入详细地址" />
-                    </span>
+                <div>
+                  <span>
+                    <span>收货地址：</span>
+                    <Cascader options={addressData} style={{width: 200}} placeholder="请选择收货地址" />
+                  </span>
+                  <span style={{ marginLeft: 20 }}>
+                    <span>详细地址：</span>
+                    <Input placeholder="请输入详细地址" />
                   </span>
                 </div>
               </td>

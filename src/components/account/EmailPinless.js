@@ -39,7 +39,7 @@ const EmailPinless = ({ email, form }) => {
     })
   }
   return (
-    <div style={styles.box}>
+    <div className={styles.box}>
       <h3 className={styles.h3}>绑定邮箱您将获得以下服务</h3>
       <p>1、绑定邮箱可以接收报价信息、下单信息、订单发货通知等，在邮件中进行订单确认、收货确认等操作。</p>
       <p>2、您可以绑定多个邮箱，方便您及时了解最新的订单信息。</p>

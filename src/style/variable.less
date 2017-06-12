@@ -5,9 +5,11 @@
 @footerHeight: 140px;
 @fontSize: 13px;
 @textColor: #666;
-@bodyMargin: 10px 15px 30px;
+@bodyMargin: 0 15px;
 @thBg: #fffcda!important;
-@pathBottom: 5px;
+@pathBottom: 8px;
+@marginVertical: 8px;
+@personInfoMargin: 20px 30px;
 //弹性盒子
 .flex {
     display: flex;
@@ -18,12 +20,12 @@
     .flex;
     flex-direction: column;
     background: #fff;
-    margin-top: 8px;
+    margin-top: @pathBottom;
     flex: 1
 }
 
 .border {
-    border: 1px solid #dedede
+    border: 1px solid #ededed;
 }
 .btn(@btnPaddingVertical: 5px, @btnPaddingHorizontal: 10px) {
     padding: @arguments;

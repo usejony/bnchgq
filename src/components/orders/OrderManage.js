@@ -4,6 +4,7 @@ import Table from '../../utils/Table';
 import HeadPath from '../../utils/HeadPath';
 import config from '../../utils/config';
 import { GET } from '../../utils/Request';
+import { Spin } from 'antd';
 
 
 export default class OrderManage extends Component {
@@ -41,11 +42,16 @@ export default class OrderManage extends Component {
   render() {
     return (
       <div>
-        <HeadPath title="询盘记录" />
+        <HeadPath title="订单管理" />
         <div className='content'>
           <Search />
           <div className="form">
-            <Table dataSource={this.state.data} />
+            {
+              this.state.data
+                ? <Table dataSource={this.state.data} />
+                : <div className='tabSpin'><Spin size="large"/></div>
+            }
+            
           </div>
         </div>
       </div>

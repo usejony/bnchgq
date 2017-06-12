@@ -1,39 +1,54 @@
 @import './variable';
+:global(.content) {
+    .bodyCont;
+    border: 1px solid @borderColor;
+}
 
+:global(.root) {
+    .flex;
+    flex:1
+}
+:global(.form) {
+    th {
+        background: @thBg
+    }
+    th,
+    td {
+        text-align: center!important
+    }
+}
 
+ :global(.tabPage) {
+    ul {
+        margin-right: 20px
+    }
+}
+:global(.tabSpin) {
+    height: 600px;
+    .flex;
+    justify-content: center;
+    align-items: center
+}
 
+:global(.tabBox) {
+    background: #fff;
+    padding: @personInfoMargin;
+    margin-top: @pathBottom;
+    border: 1px solid @borderColor;
+}
 
-
-
-// :global(.border) {
-//     .border;
+// html,
+// body {
+//     height: 100%;
 // }
 
-// :global(.form) {
-//   & th {
-//     background: @thBg
-//   }
-//   & th,& td {
-//     text-align: center!important
-//   }
-//   .ant-pagination{
-//     margin-right: 20px
-//   }
+// #root {
+//     min-height: 100%;
+//     .flex;
 // }
 
-html,
-body {
-    height: 100%;
-}
-
-#root {
-    min-height: 100%;
-    .flex;
-}
-
-#main {
-    .flex;
-    flex-direction: column;
-    flex: 1;
-}
-
+// #main {
+//     .flex;
+//     flex-direction: column;
+//     flex: 1;
+// }

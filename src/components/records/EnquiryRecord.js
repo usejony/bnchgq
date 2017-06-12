@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 import HeadPath from '../../utils/HeadPath';
 import config from '../../utils/config';
 import { GET } from '../../utils/Request';
-
+import { Spin } from 'antd';
 import styles from '../../style/records.less';
 export default class extends Component {
   constructor(props) {
@@ -43,10 +43,15 @@ export default class extends Component {
     return (
       <div>
         <HeadPath title="询盘记录" />
-        <div className={styles.content}>
+        <div className='content'>
           <Search />
-          <div className={styles.form}>
-            <Table dataSource={this.state.data} />
+          <div className='form'>
+            {
+              this.state.data
+                ? <Table dataSource={this.state.data} />
+                : <div className="tabSpin"><Spin size="large"/></div>
+            }
+            
           </div>
         </div>
       </div>

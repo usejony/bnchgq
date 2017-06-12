@@ -56,8 +56,5 @@ const PswChange = ({form}) => {
   )
 };
 
-const styles = {
-
-}
 
 export default Form.create()(PswChange);

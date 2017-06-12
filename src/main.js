@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers/reducers';
 import { Provider } from 'react-redux';
 import './style/common.less';
+import styles from './style/main.less';
 
 
 import Header from './containers/Header';
@@ -23,12 +24,13 @@ console.log(store.getState())
 
 const element = document.createElement('div');
 element.id = 'root';
+element.className='root'
 document.body.appendChild(element);
 
 const Box = () => {
   return (
     <Provider store={store}>
-      <div id="main">
+      <div className={styles.main}>
         <Header />
         <Body />
         <Footer />
