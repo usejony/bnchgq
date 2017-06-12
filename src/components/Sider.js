@@ -6,7 +6,9 @@ import OnlineEnquiry from './enquiry/OnlineEnquiry';
 import EnquiryRecord from './records/EnquiryRecord';
 import OrderManage from './orders/OrderManage';
 import PersonInfo from './info/PersonInfo';
-import AccountManege from './account/AccountManage';
+// import AccountManege from './account/AccountManage';
+
+import styles from '../style/slider.less';
 
 const SubMenu = Menu.SubMenu;
 
@@ -35,42 +37,24 @@ export const siderAry = [
     to: '/info',
     component: PersonInfo
   },
-  {
-    title: '账户管理',
-    icon: 'setting',
-     exact: true,
-    to: '/',
-    component: AccountManege
-  }
+  // {
+  //   title: '账户管理',
+  //   icon: 'setting',
+  //    exact: true,
+  //   to: '/',
+  //   component: AccountManege
+  // }
 ];
 
 
 export const Sider = () => (
-  <Menu onClick={(e) => console.log('click', e)} mode="vertical" style={styles.menu}>
+  <Menu onClick={(e) => console.log('click', e)} mode="vertical" className={styles.menu}>
     {
       siderAry.map((item, index) => (
-        <Menu.Item key={item.icon} style={styles.item}>
-          <Link to={item.to} style={styles.link}><Icon type={item.icon}/>{item.title}</Link>
+        <Menu.Item key={item.icon} className={styles.item}>
+          <Link to={item.to} className={styles.link}><Icon type={item.icon}/>{item.title}</Link>
         </Menu.Item>
       ))
     }
   </Menu>
 );
-
-const styles = {
-  link: {
-    fontSize: 14,
-    textAlign: 'center',
-    borderWidth: 1,
-    borderColor: 'red'
-  },
-  menu: {
-    border: 'none',
-    minWidth: 250
-  },
-  item: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
-    borderBottomStyle: 'solid'
-  }
-}

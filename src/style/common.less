@@ -1,23 +1,25 @@
 @import './variable';
-:global(.text) {
-    color: @textColor;
-}
 
-:global(.border) {
-    .border;
-}
 
-:global(.form) {
-  & th {
-    background: @thBg
-  }
-  & th,& td {
-    text-align: center!important
-  }
-  .ant-pagination{
-    margin-right: 20px
-  }
-}
+
+
+
+
+// :global(.border) {
+//     .border;
+// }
+
+// :global(.form) {
+//   & th {
+//     background: @thBg
+//   }
+//   & th,& td {
+//     text-align: center!important
+//   }
+//   .ant-pagination{
+//     margin-right: 20px
+//   }
+// }
 
 html,
 body {
@@ -35,14 +37,3 @@ body {
     flex: 1;
 }
 
-:global(.body) {
-    height: 100%;
-    .flex;
-    flex-direction: column;
-    .content {
-        background: #fff;
-        padding-top: 30px;
-        margin-top: 8px;
-        flex: 1
-    }
-}

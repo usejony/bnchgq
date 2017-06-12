@@ -4,6 +4,8 @@ import { Input, DatePicker, Select, Button } from 'antd';
 const { RangePicker } = DatePicker;
 const Option = Select.Option;
 const dateFormat = 'YYYY/MM/DD';
+
+import styles from '../style/sectionSearch.less';
 export default class Search extends Component {
   constructor(props) {
     super(props);
@@ -19,19 +21,19 @@ export default class Search extends Component {
   }
   render() {
     return (
-      <div style={styles.search}>
-        <div style={styles.box}>
+      <div className={styles.search}>
+        <div className={styles.box}>
           <span>
             <span>询盘编号：</span>
-            <Input placeholder="输入编号..." style={styles.numInp} />
+            <Input placeholder="输入编号..." className={styles.numInp} />
           </span>
           <span>
             <span>提交日期：</span>
-            <RangePicker format={dateFormat} style={styles.dateRange}/>
+            <RangePicker format={dateFormat} className={styles.dateRange}/>
           </span>
           <span>
             <span>每页行数：</span>
-            <Select defaultValue={this.state.lineNum} style={styles.lineNum} onChange={this.lineHandle.bind(this)}>
+            <Select defaultValue={this.state.lineNum} className={styles.lineNum} onChange={this.lineHandle.bind(this)}>
               <Option value='10'>10</Option>
               <Option value='15'>15</Option>
               <Option value='20'>20</Option>
@@ -39,31 +41,10 @@ export default class Search extends Component {
             </Select>
           </span>
           <span>
-            <Button type="primary" style={styles.btn}>查询</Button>
+            <Button type="primary" className={styles.btn}>查询</Button>
           </span>
         </div>
       </div>
     );
-  }
-}
-
-const styles = {
-  search: {
-    marginTop: 5,
-    paddingBottom: 30,
-  },
-  box: {
-    display: 'flex',
-    justifyContent: 'space-around'
-  },
-  numInp: {
-    width: 180,
-  },
-  dateRange: {
-    width: 200
-  },
-  btn: {
-    width: 80,
-    height: 30
   }
 }

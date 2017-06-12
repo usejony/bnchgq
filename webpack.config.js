@@ -17,7 +17,7 @@ module.exports = {
         options: {
           presets: ['es2015', 'react'],
           plugins: [
-            ['import', { libraryName: 'antd', style: true }]
+            ['import', { libraryName: 'antd', style: "css" }]
           ]
         }
       },
@@ -25,19 +25,20 @@ module.exports = {
         test: /\.css$/,
         use: [
           'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true
-            }
-          }
+          'css-loader',
         ]
       },
       {
         test: /\.less$/,
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[name]-[hash:base64:5]'
+            }
+          },
           'less-loader'
         ]
       }

@@ -1,46 +1,44 @@
 @import './variable';
-
 //header
-#header-box {
-  height: @headerHeight;
-  background: @themeColor;
-
-
-.header-left {
-  height: @headerHeight;
-  .flex;
-  align-items: center;
+.box {
+    height: @headerHeight;
+    background: @themeColor;
 }
 
-.header-right {
-  .flex;
-  flex: 1;
-  align-items: center;
-  height: @headerHeight;
-  justify-content: flex-end;
-  color: #fff;
-  font-size: @fontSize;
+.left {
+    height: @headerHeight;
+    .flex;
+    align-items: center;
 }
 
-.header-tab {
-  margin-left: 10px;
-  li {
-    display: inline-block;
+.right {
+    .flex;
+    flex: 1;
+    align-items: center;
+    height: @headerHeight;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: @fontSize;
+}
+
+.tab {
     margin-left: 10px;
-    position: relative;
-    &:after {
-      content: '';
-      display: block;
-      height: 12px;
-      width: 1px;
-      background: #fff;
-      position: absolute;
-      right: -5px;
-      top: 3px;
+    li {
+        display: inline-block;
+        margin-left: 10px;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            height: 12px;
+            width: 1px;
+            background: #fff;
+            position: absolute;
+            right: -5px;
+            top: 3px;
+        }
+        &:last-child:after {
+            background: none
+        }
     }
-    &:last-child:after {
-      background: none
-    }
-  };
-}
 }

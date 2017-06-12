@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Search from '../../utils/Search';
+import Search from '../../utils/SectionSearch';
 import Table from '../../utils/Table';
 import HeadPath from '../../utils/HeadPath';
 import config from '../../utils/config';
@@ -40,9 +40,9 @@ export default class OrderManage extends Component {
 
   render() {
     return (
-      <div className="body">
+      <div>
         <HeadPath title="询盘记录" />
-        <div className="content border">
+        <div className='content'>
           <Search />
           <div className="form">
             <Table dataSource={this.state.data} />

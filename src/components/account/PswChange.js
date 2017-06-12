@@ -31,6 +31,27 @@ const PswChange = ({form}) => {
           <Input placeholder="请输入账户原始密码"/>
         )}
       </FormItem>
+      <FormItem {...FormLayout} label="新密码">
+        {getFieldDecorator('newPsw',{
+          rules: [{
+            required: true,
+            message: '请输入新密码！'
+          }]
+        })(
+          <Input placeholder="请输入新密码"/>
+        )}
+      </FormItem>
+      <FormItem {...FormLayout} label="确认密码">
+        {getFieldDecorator('confirmPsw',{
+          rules: [{
+            required: true,
+            message: '请确认新密码！'
+          }]
+        })(
+          <Input placeholder="请确认新密码"/>
+        )}
+      </FormItem>
+
     </Form>
   )
 };

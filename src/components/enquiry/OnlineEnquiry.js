@@ -1,14 +1,14 @@
 import React from 'react';
 
 import HeadPath from '../../utils/HeadPath';
-import '../../style/online.less';
+import styles from  '../../style/online.less';
 import Table from './Table';
 
 const OnlineEnquiry = () => (
-  <div className="body">
+  <div>
     <HeadPath title="在线询价"/>
-    <div className="process">
-      <h3 className="process-title">询价流程</h3>
+    <div className={styles.process}>
+      <h3 className={styles.processTitle}>询价流程</h3>
       <img src="../../src/imgs/process.png" alt=""/>
     </div>
     <div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Steps, Icon, Form, Input, Button, message} from 'antd';
 
+import styles from '../../style/account.less';
 const Step = Steps.Step;
 const FormItem = Form.Item;
 const FormLayout = {
@@ -39,20 +40,20 @@ const EmailPinless = ({ email, form }) => {
   }
   return (
     <div style={styles.box}>
-      <h3 style={styles.h3}>绑定邮箱您将获得以下服务</h3>
+      <h3 className={styles.h3}>绑定邮箱您将获得以下服务</h3>
       <p>1、绑定邮箱可以接收报价信息、下单信息、订单发货通知等，在邮件中进行订单确认、收货确认等操作。</p>
       <p>2、您可以绑定多个邮箱，方便您及时了解最新的订单信息。</p>
-      <div style={styles.pinless}>
-        <h4 style={styles.title}>已绑定的邮箱</h4>
-        <p style={styles.haveEmail}>
+      <div className={styles.pinless}>
+        <h4 className={styles.title}>已绑定的邮箱</h4>
+        <p className={styles.haveEmail}>
           {
             email
-              ? <span style={styles.email}>{email}</span>
-              : <span style={styles.note}>您暂时未绑定邮箱</span>
+              ? <span className={styles.email}>{email}</span>
+              : <span className={styles.note}>您暂时未绑定邮箱</span>
           }
         </p>
-        <h4 style={styles.title}>新增绑定邮箱</h4>
-        <Steps style={styles.steps}>
+        <h4 className={styles.title}>新增绑定邮箱</h4>
+        <Steps className={styles.steps}>
           <Step status='process' title="新增邮箱" icon={<Icon type="plus-circle" />} />
           <Step status='wait' title="激活邮箱" icon={<Icon type="clock-circle" />} />
           <Step status='wait' title="绑定成功" icon={<Icon type="smile" />} />
@@ -70,7 +71,7 @@ const EmailPinless = ({ email, form }) => {
               )}
           </FormItem>
           <FormItem style={{ textAlign: 'center' }}>
-            <Button type="primary" htmlType="submit" style={styles.btn}>绑定</Button>
+            <Button type="primary" htmlType="submit" className={styles.btn}>绑定</Button>
           </FormItem>
         </Form>
       </div>
@@ -78,40 +79,40 @@ const EmailPinless = ({ email, form }) => {
   )
 };
 
-const styles = {
-  box: {
-    paddingTop: 10
-  },
-  h3: {
-    marginBottom: 10
-  },
-  pinless: {
-    marginTop: 25,
-    marginLeft: 20,
-    marginRight: 20
-  },
-  title: {
-    fontSize: 15,
-    marginTop: 20
-  },
-  haveEmail: {
-    marginTop: 8
-  },
-  email: {
-    fontSize: 13,
-    color: '#2d70b8'
-  },
-  note: {
-    fontSize: 14,
-    color: 'red'
-  },
-  steps: {
-    marginTop: 20
-  },
-  btn: {
-    width: 100
-  }
-}
+// const styles = {
+//   box: {
+//     paddingTop: 10
+//   },
+//   h3: {
+//     marginBottom: 10
+//   },
+//   pinless: {
+//     marginTop: 25,
+//     marginLeft: 20,
+//     marginRight: 20
+//   },
+//   title: {
+//     fontSize: 15,
+//     marginTop: 20
+//   },
+//   haveEmail: {
+//     marginTop: 8
+//   },
+//   email: {
+//     fontSize: 13,
+//     color: '#2d70b8'
+//   },
+//   note: {
+//     fontSize: 14,
+//     color: 'red'
+//   },
+//   steps: {
+//     marginTop: 20
+//   },
+//   btn: {
+//     width: 100
+//   }
+// }
 
 const mapStateToProps = (state) => {
   return {

@@ -1,7 +1,7 @@
 //less变量集合
-
 @themeColor: #2d70b8;
 @headerHeight: 100px;
+@borderColor: #ededed; //边框颜色
 @footerHeight: 140px;
 @fontSize: 13px;
 @textColor: #666;
@@ -10,14 +10,21 @@
 @pathBottom: 5px;
 //弹性盒子
 .flex {
-  display: flex;
-  display: -webkit-flex;
+    display: flex;
+}
+
+.bodyCont {
+    height: 100%;
+    .flex;
+    flex-direction: column;
+    background: #fff;
+    margin-top: 8px;
+    flex: 1
 }
 
 .border {
-  border: 1px solid #dedede
+    border: 1px solid #dedede
 }
-
-.btn(@btnPaddingVertical:5px,@btnPaddingHorizontal:10px) {
-  padding: @arguments;
+.btn(@btnPaddingVertical: 5px, @btnPaddingHorizontal: 10px) {
+    padding: @arguments;
 }

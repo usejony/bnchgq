@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Search from '../../utils/Search';
+import Search from '../../utils/SectionSearch';
 import Table from '../../utils/Table';
 import { Link } from 'react-router'
 import HeadPath from '../../utils/HeadPath';
 import config from '../../utils/config';
 import { GET } from '../../utils/Request';
 
-
+import styles from '../../style/records.less';
 export default class extends Component {
   constructor(props) {
     super(props);
@@ -41,11 +41,11 @@ export default class extends Component {
 
   render() {
     return (
-      <div id="records" className="body">
+      <div>
         <HeadPath title="询盘记录" />
-        <div className="content border">
+        <div className={styles.content}>
           <Search />
-          <div className="form">
+          <div className={styles.form}>
             <Table dataSource={this.state.data} />
           </div>
         </div>
